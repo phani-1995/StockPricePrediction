@@ -8,11 +8,11 @@ The Predicted prices has been projected on the web page using the Flask EC2 inst
 
 ## Software Prerequisites:
 
-1.Python3,
-2.Java 8,
-3.Kafka_2.11-1.0.0,
-4.Apache-zookeeper-3.5.5,
-5.pyspark
+- Python3
+- Java 8,
+- Kafka_2.11-1.0.0,
+- Apache-zookeeper-3.5.5,
+- pyspark
 
 ## Step by step Procedure followed for doing this project:
 
@@ -48,11 +48,11 @@ After reading the data from S3 Now we have to perform EDA process on data set be
 
 **Step4**: Now we have to study the data and make it clean to build a most effective model and we should also decide which are the dependent features and which are independent features.
 
-1.In the Eda process we have to check data types of the columns in the dataset in our dataset default is object so we have changed that to float and date to date type.
-2.I have reindexed the column names
-3.We have to check for the null values in the columns if any null value is present better to replace it with the average of that column.
-4.Also i have checked the outliers if present any then we have to replace it with median 
-5.I have checked the correlation of that dataset to know how the variables are correlated with each other and I also checked the descriptive statistics of that dataset.
+- In the Eda process we have to check data types of the columns in the dataset in our dataset default is object so we have changed that to float and date to date type.
+- I have reindexed the column names
+- We have to check for the null values in the columns if any null value is present better to replace it with the average of that column.
+- Also i have checked the outliers if present any then we have to replace it with median 
+- I have checked the correlation of that dataset to know how the variables are correlated with each other and I also checked the descriptive statistics of that dataset.
 Now the dataset is ready to train the model 
 
 ## Training and testing the model :
@@ -100,17 +100,17 @@ Starting consumer
 ```
  **$ ./bin/kafka-consumer-consumer.sh --bootstrap-service localhost:9092 --topic stock_prices
  ```
-1.When you enter any message in the producer it has to show in consumer
-2.Now we have to run the python prods.py in which we have read the live stock data from alpha vantage using keys to the kafka server 
-3.Now we have to run the cons.py in that we have to read the data from the kafka server and we have to load the model on that data and predict that data.
-4.Now run the python app.py in which we imported the cons.py to display the result data on the web using Flask and highcharts.
+- When you enter any message in the producer it has to show in consumer
+- Now we have to run the python prods.py in which we have read the live stock data from alpha vantage using keys to the kafka server 
+- Now we have to run the cons.py in that we have to read the data from the kafka server and we have to load the model on that data and predict that data.
+- Now run the python app.py in which we imported the cons.py to display the result data on the web using Flask and highcharts.
 
 ## Deployment
 
 To deploy a flask application, create an EC2 instance with t2 medium and minimum of 15GB of storage with ubuntu OS on AWS.
-1.Create a http security group to allow the public to view web sites.
-2.Download the .pem file to access the instance from the local terminal.
-3.To access instance from local terminal, make ssh connection
+- Create a http security group to allow the public to view web sites.
+- Download the .pem file to access the instance from the local terminal.
+- To access instance from local terminal, make ssh connection
 ```
 **ssh -i flask.pem ubuntu@<Elastic IP address of ec2 instance>
 ```
@@ -214,15 +214,15 @@ Check the result on web using elasticip followed by 8080 port
 
 # Job Scheduler
 
-1.Create job schedule to performane operation autometically.
-2.The Stock Price Prediction of streaming data's Graph display on webpage with aws instance, have to schedule 4 jobs.
-3.First running two servers, zookeeper and kafka with a time gap of 5 minutes.
-4.Running Producer and Visualization code with time gap of 5 minutes.
-5.Create a crontab for jobs scheduling within 5 minutes.
-6.create path files in instance to schedule jobs.
-7.Open Instance in sysytem
-8.Check "$ crontab -l" for list of running job schedule
-9.create new jobs then create "crontab -e"
+- Create job schedule to performane operation autometically.
+- The Stock Price Prediction of streaming data's Graph display on webpage with aws instance, have to schedule 4 jobs.
+- First running two servers, zookeeper and kafka with a time gap of 5 minutes.
+- Running Producer and Visualization code with time gap of 5 minutes.
+- Create a crontab for jobs scheduling within 5 minutes.
+- create path files in instance to schedule jobs.
+- Open Instance in sysytem
+- Check "$ crontab -l" for list of running job schedule
+- create new jobs then create "crontab -e"
 It need Minutes(0-60), Hours(1-24), day of month(1-31), month(1-12), Week(0-6) and job ToDo or location of file Schedule to work
   1. Job schedule to zookeeper 
   ```           
