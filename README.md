@@ -212,7 +212,7 @@ Now run the app command using gunicorn3
 ```
 Check the result on web using elasticip followed by 8080 port
 
-# Job Scheduler
+## Job Scheduler
 
 - Create job schedule to performane operation autometically.
 - The Stock Price Prediction of streaming data's Graph display on webpage with aws instance, have to schedule 4 jobs.
