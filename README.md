@@ -8,10 +8,10 @@ The Predicted prices has been projected on the web page using the Flask EC2 inst
 
 Software Prerequisites:
 
-Python3
-Java 8
-Kafka_2.11-1.0.0
-Apache-zookeeper-3.5.5
+Python3,
+Java 8,
+Kafka_2.11-1.0.0,
+Apache-zookeeper-3.5.5,
 pyspark
 
 Step by step Procedure followed for doing this project:
