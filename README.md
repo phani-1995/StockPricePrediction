@@ -51,7 +51,6 @@ After reading the data from S3 Now we have to perform EDA process on data set be
 - In the Eda process we have to check data types of the columns in the dataset in our dataset default is object so we have changed that to float and date to date type.
 - I have reindexed the column names
 - We have to check for the null values in the columns if any null value is present better to replace it with the average of that column.
-- Also i have checked the outliers if present any then we have to replace it with median 
 - I have checked the correlation of that dataset to know how the variables are correlated with each other and I also checked the descriptive statistics of that dataset.
 Now the dataset is ready to train the model 
 
@@ -234,11 +233,11 @@ It need Minutes(0-60), Hours(1-24), day of month(1-31), month(1-12), Week(0-6) a
 
           3. Job schedule to Producer
 
-             11 06 * * * cd python3 /home/ubuntu/Bridgelabz2020/Producer.py
+             11 06 * * * cd python3 /home/ubuntu/StockPricePrediction/Prod.py
           
           4. Job schedule to visulazation
 
-             11 06 * * * cd gunicorn3 --threads=4 /home/ubuntu/Bridgelabz2020/visualization:app
+             11 06 * * * cd gunicorn3 --threads=4 /home/ubuntu/StockPricePrediction/app:app
 
 
 ```
