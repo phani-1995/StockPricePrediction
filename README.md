@@ -239,11 +239,11 @@ It need Minutes(0-60), Hours(1-24), day of month(1-31), month(1-12), Week(0-6) a
 
              11 06 * * * cd gunicorn3 --threads=4 /home/ubuntu/StockPricePrediction/app:app
 
-   ## LICENSE
+ 
+```
+  ## LICENSE
    Phanindra
    licensed under MIT LICENSE
-```
-
 
 
 
