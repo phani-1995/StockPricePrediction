@@ -21,7 +21,7 @@ numpy==1.18.4
 pandas==1.0.3
 py4j==0.10.7
 PyHive==0.6.2
-pyspark==2.4.6
+pyspark==3.2.2
 python-apt==1.6.5+ubuntu0.2
 python-dateutil==2.8.1
 python-debian==0.1.32
